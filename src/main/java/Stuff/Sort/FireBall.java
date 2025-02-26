@@ -8,6 +8,6 @@ public class FireBall extends BaseStuff {
         this.type = "Magie";
         this.degats = 10;
         this.defense = 0;
-        this.manaCost = 10;
+        this.manaCost = 2;
     }
 }
