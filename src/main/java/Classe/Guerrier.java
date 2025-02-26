@@ -8,12 +8,11 @@ public class Guerrier extends MainCharacter {
     public Guerrier(String name, BaseStuff stuff) {
         this.name = name;
         this.stuff = stuff;
+        this.classOfCombat = "guerrier";
 
         pv = 100;
         degatsDeBase = 10;
         magie = 0;
-
-        this.classOfCombat = "guerrier";
     }
 
     @Override
