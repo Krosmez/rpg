@@ -5,21 +5,23 @@ import Stuff.BaseStuff;
 
 public class Guerrier extends MainCharacter {
 
-    public Guerrier(String name, int pv, BaseStuff stuff) {
+    public Guerrier(String name, BaseStuff stuff) {
         this.name = name;
-        this.pv = pv;
+        this.stuff = stuff;
+
+        pv = 100;
         degatsDeBase = 10;
         magie = 0;
-
-        this.stuff = stuff;
     }
 
     @Override
     public int attaqueAvecArme(BaseStuff stuff) {
-        if(stuff.type.equalsIgnoreCase("melee")) {
+        if (stuff.type.equalsIgnoreCase("melee")) {
             return stuff.degats + degatsDeBase;
-        } else {
+        } else if (stuff.type.equalsIgnoreCase("distance")) {
             return degatsDeBase;
+        } else {
+            return 0;
         }
     }
 

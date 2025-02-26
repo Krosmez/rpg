@@ -31,16 +31,20 @@ public class BattleBehavior {
             pv2 -= degats2;
             player1.setPv(pv1);
             player2.setPv(pv2);
-            if (pv1 <= 0 && pv2 <= 0) {
-                System.out.println("Les deux joueurs sont morts");
-            } else if (pv1 <= 0) {
-                 System.out.println(player2.getName() + " a gagné");
-            } else if (pv2 <= 0) {
-                 System.out.println(player1.getName() + " a gagné");
-            } else {
-                System.out.println("Le combat continue");
-            }
+            getEndOfTurn(player1, player2, pv1, pv2);
         }
         return "Fin du combat";
+    }
+
+    private static void getEndOfTurn(MainCharacter player1, MainCharacter player2, int pv1, int pv2) {
+        if (pv1 <= 0 && pv2 <= 0) {
+            System.out.println("Les deux joueurs sont morts");
+        } else if (pv1 <= 0) {
+             System.out.println(player2.getName() + " a gagné");
+        } else if (pv2 <= 0) {
+             System.out.println(player1.getName() + " a gagné");
+        } else {
+            System.out.println("Le combat continue");
+        }
     }
 }
