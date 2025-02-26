@@ -3,20 +3,20 @@ package Classe;
 import Personnage.MainCharacter;
 import Stuff.BaseStuff;
 
-public class Mage extends MainCharacter{
+public class Mage extends MainCharacter {
     public Mage(String name, int pv, BaseStuff stuff) {
         this.name = name;
         this.pv = pv;
-        degatsDeBase = 10;
-        magie = 5;
-
         this.stuff = stuff;
         this.classOfCombat = "mage";
+
+        degatsDeBase = 10;
+        magie = 5;
     }
 
     @Override
     public int attaqueAvecArme(BaseStuff stuff) {
-        if(stuff.type.equalsIgnoreCase("magie")) {
+        if (stuff.type.equalsIgnoreCase("magie")) {
             return stuff.degats + degatsDeBase;
         } else {
             return degatsDeBase;

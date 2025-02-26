@@ -16,6 +16,7 @@ public class BattleBehavior {
         while (pv1 > 0 && pv2 > 0) {
             boolean hasStuff1 = player1.getStuff() != null;
             boolean hasStuff2 = player2.getStuff() != null;
+
             boolean isMage1 = player1.getClassOfCombat().equalsIgnoreCase("mage");
             boolean isMage2 = player2.getClassOfCombat().equalsIgnoreCase("mage");
             boolean hasMagie1 = player1.getMagie() > 0;
@@ -62,20 +63,24 @@ public class BattleBehavior {
             pv2 -= degats2;
             player1.setPv(pv1);
             player2.setPv(pv2);
-            getEndOfTurn(player1, player2, pv1, pv2);
+
+            getEndOfTurn(player1, player2, pv1, pv2, stuff1, stuff2);
         }
         return "Fin du combat";
     }
 
-    private static void getEndOfTurn(MainCharacter player1, MainCharacter player2, int pv1, int pv2) {
+    private static void getEndOfTurn(MainCharacter player1, MainCharacter player2, int pv1, int pv2, String stuff1, String stuff2) {
         if (pv1 <= 0 && pv2 <= 0) {
             System.out.println("Les deux joueurs sont morts");
         } else if (pv1 <= 0) {
-             System.out.println(player2.getName() + " a gagné");
+            System.out.println(player2.getName() + " a gagné");
         } else if (pv2 <= 0) {
-             System.out.println(player1.getName() + " a gagné");
+            System.out.println(player1.getName() + " a gagné");
         } else {
+            System.out.println(player1.getName() + " utilise " + stuff1 + " : " + player1.getPv() + " pv" + " | " + player1.getMagie() + " magie");
+            System.out.println(player2.getName() + " utilise " + stuff2 + " : " + player2.getPv() + " pv" + " | " + player2.getMagie() + " magie");
             System.out.println("Le combat continue");
+            System.out.println("_______________________");
         }
     }
 }

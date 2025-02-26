@@ -3,7 +3,7 @@ package Classe;
 import Personnage.MainCharacter;
 import Stuff.BaseStuff;
 
-public class Archer extends MainCharacter{
+public class Archer extends MainCharacter {
     public Archer(String name, int pv, BaseStuff stuff) {
         this.name = name;
         this.pv = pv;
@@ -16,7 +16,7 @@ public class Archer extends MainCharacter{
 
     @Override
     public int attaqueAvecArme(BaseStuff stuff) {
-        if(stuff.type.equalsIgnoreCase("distance")) {
+        if (stuff.type.equalsIgnoreCase("distance")) {
             return stuff.degats + degatsDeBase;
         } else {
             return degatsDeBase;
