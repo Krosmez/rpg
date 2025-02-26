@@ -11,6 +11,7 @@ public class Mage extends MainCharacter{
         magie = 5;
 
         this.stuff = stuff;
+        this.classOfCombat = "mage";
     }
 
     @Override

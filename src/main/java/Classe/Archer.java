@@ -11,6 +11,7 @@ public class Archer extends MainCharacter{
         magie = 0;
 
         this.stuff = stuff;
+        this.classOfCombat = "archer";
     }
 
     @Override

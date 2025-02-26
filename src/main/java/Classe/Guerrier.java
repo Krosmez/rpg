@@ -12,6 +12,8 @@ public class Guerrier extends MainCharacter {
         pv = 100;
         degatsDeBase = 10;
         magie = 0;
+
+        this.classOfCombat = "guerrier";
     }
 
     @Override
