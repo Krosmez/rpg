@@ -30,7 +30,6 @@ public class BattleBehavior {
                 stuff1 = "combat à main nue";
             }
 
-
             if (hasStuff2 && (!isMage2 || hasMagie2)) {
                 attaque2 = player2.attaqueAvecArme(player2.getStuff());
                 stuff2 = player2.getStuff().name;
