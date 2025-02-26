@@ -10,8 +10,9 @@ import lombok.Setter;
 public abstract class MainCharacter implements ICombat {
     public String name;
     public int pv;
-    protected int magie;
+    public int magie;
     public int degatsDeBase = 0;
+    public String classOfCombat;
 
     public BaseStuff stuff;
 }

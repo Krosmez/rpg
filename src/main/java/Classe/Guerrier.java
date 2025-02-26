@@ -12,6 +12,7 @@ public class Guerrier extends MainCharacter {
         magie = 0;
 
         this.stuff = stuff;
+        this.classOfCombat = "guerrier";
     }
 
     @Override
