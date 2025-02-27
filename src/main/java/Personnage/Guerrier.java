@@ -1,6 +1,5 @@
-package Classe;
+package Personnage;
 
-import Personnage.MainCharacter;
 import Stuff.BaseStuff;
 
 public class Guerrier extends MainCharacter {

@@ -1,22 +1,24 @@
-package Classe;
+package Personnage;
 
-import Personnage.MainCharacter;
 import Stuff.BaseStuff;
 
-public class Archer extends MainCharacter {
-    public Archer(String name, int pv, BaseStuff stuff) {
+public class Mage extends MainCharacter {
+    public Mage(String name, int pv, BaseStuff stuff) {
         this.name = name;
         this.pv = pv;
-        degatsDeBase = 10;
-        magie = 0;
-
         this.stuff = stuff;
-        this.classOfCombat = "archer";
+        this.classOfCombat = "mage";
+
+        degatsDeBase = 10;
+        magie = 5;
     }
 
     @Override
     public int attaqueAvecArme(BaseStuff stuff) {
-        if (stuff.type.equalsIgnoreCase("distance")) {
+        if (stuff.type.equalsIgnoreCase("magie")) {
+            if (magie > 0) {
+                magie -= stuff.manaCost;
+            }
             return stuff.degats + degatsDeBase;
         } else {
             return degatsDeBase;

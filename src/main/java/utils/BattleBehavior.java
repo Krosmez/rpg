@@ -19,6 +19,7 @@ public class BattleBehavior {
 
             boolean isMage1 = player1.getClassOfCombat().equalsIgnoreCase("mage");
             boolean isMage2 = player2.getClassOfCombat().equalsIgnoreCase("mage");
+
             boolean hasMagie1 = player1.getMagie() > 0;
             boolean hasMagie2 = player2.getMagie() > 0;
 
@@ -53,10 +54,14 @@ public class BattleBehavior {
                 degats2 = 0;
             }
 
-            magie1 -= player1.stuff.manaCost;
-            magie2 -= player2.stuff.manaCost;
-            player1.setMagie(magie1);
-            player2.setMagie(magie2);
+            if (player1.getStuff() != null) {
+                magie1 -= player1.stuff.manaCost;
+                player1.setMagie(magie1);
+            }
+            if (player2.getStuff() != null) {
+                magie2 -= player2.stuff.manaCost;
+                player2.setMagie(magie2);
+            }
 
             pv1 -= degats1;
             pv2 -= degats2;

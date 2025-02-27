@@ -1,8 +1,7 @@
 package Story;
 
-import Classe.Guerrier;
+import Personnage.Guerrier;
 import Personnage.MainCharacter;
-import Stuff.Weapon.Sword;
 import utils.CharacterCreator;
 
 public class Start {
@@ -19,7 +18,7 @@ public class Start {
         if (character != null) {
             System.out.println("Your adventure begins, " + character.getName() + "!");
             // Add more story elements and game logic here
-            MainCharacter cypryMonster = new Guerrier("CypryMonster", new Sword());
+            MainCharacter cypryMonster = new Guerrier("CypryMonster", null);
             ChapterOne.chapterOne(character, cypryMonster);
         } else {
             System.out.println("Character creation failed. Please restart the game.");

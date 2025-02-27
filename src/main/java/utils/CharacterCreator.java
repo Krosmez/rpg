@@ -1,6 +1,6 @@
 package utils;
 
-import Classe.Guerrier;
+import Personnage.Guerrier;
 import Personnage.MainCharacter;
 import Stuff.BaseStuff;
 

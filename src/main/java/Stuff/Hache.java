@@ -1,6 +1,4 @@
-package Stuff.Weapon;
-
-import Stuff.BaseStuff;
+package Stuff;
 
 public class Hache extends BaseStuff {
     public Hache() {

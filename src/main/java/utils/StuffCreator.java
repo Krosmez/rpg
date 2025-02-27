@@ -1,9 +1,9 @@
 package utils;
 
 import Stuff.BaseStuff;
-import Stuff.Weapon.Sword;
-import Stuff.Weapon.Arc;
-import Stuff.Weapon.Hache;
+import Stuff.Sword;
+import Stuff.Arc;
+import Stuff.Hache;
 import lombok.Getter;
 
 import java.util.Scanner;
