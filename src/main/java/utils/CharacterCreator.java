@@ -1,7 +1,7 @@
 package utils;
 
 import Personnage.Guerrier;
-import Personnage.MainCharacter;
+import Personnage.Personnage;
 import Stuff.BaseStuff;
 
 import java.util.Scanner;
@@ -11,11 +11,11 @@ import static utils.StuffCreator.createStuff;
 
 public class CharacterCreator {
 
-    public static MainCharacter createCharacter() {
+    public static Personnage createCharacter() {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         String type = null;
-        MainCharacter character = null;
+        Personnage character = null;
 
         System.out.println("Enter character name:");
         String name = scanner.nextLine();
@@ -35,7 +35,7 @@ public class CharacterCreator {
         return character;
     }
 
-    private static MainCharacter getMainCharacter(String type, MainCharacter character, String name, BaseStuff stuff) {
+    private static Personnage getMainCharacter(String type, Personnage character, String name, BaseStuff stuff) {
         if (type != null) {
             switch (type) {
                 case "Guerrier" -> character = new Guerrier(name, stuff);

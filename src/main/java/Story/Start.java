@@ -1,7 +1,7 @@
 package Story;
 
 import Personnage.Guerrier;
-import Personnage.MainCharacter;
+import Personnage.Personnage;
 import utils.CharacterCreator;
 
 public class Start {
@@ -12,13 +12,13 @@ public class Start {
         System.out.println("Your journey begins now. Choose your path wisely.");
 
         // Create a character
-        MainCharacter character = CharacterCreator.createCharacter();
+        Personnage character = CharacterCreator.createCharacter();
 
         // Start the adventure
         if (character != null) {
             System.out.println("Your adventure begins, " + character.getName() + "!");
             // Add more story elements and game logic here
-            MainCharacter cypryMonster = new Guerrier("CypryMonster", null);
+            Personnage cypryMonster = new Guerrier("CypryMonster", null);
             ChapterOne.chapterOne(character, cypryMonster);
         } else {
             System.out.println("Character creation failed. Please restart the game.");

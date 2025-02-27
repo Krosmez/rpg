@@ -2,7 +2,7 @@ package Personnage;
 
 import Stuff.BaseStuff;
 
-public class Mage extends MainCharacter {
+public class Mage extends Personnage {
     public Mage(String name, int pv, BaseStuff stuff) {
         this.name = name;
         this.pv = pv;

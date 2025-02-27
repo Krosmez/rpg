@@ -2,7 +2,7 @@ package Personnage;
 
 import Stuff.BaseStuff;
 
-public class Archer extends MainCharacter {
+public class Archer extends Personnage {
     public Archer(String name, int pv, BaseStuff stuff) {
         this.name = name;
         this.pv = pv;

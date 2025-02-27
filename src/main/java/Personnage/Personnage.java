@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class MainCharacter implements ICombat {
+public abstract class Personnage implements ICombat {
     public String name;
     public int pv;
     public int magie;

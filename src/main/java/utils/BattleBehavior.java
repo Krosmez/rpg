@@ -1,9 +1,9 @@
 package utils;
 
-import Personnage.MainCharacter;
+import Personnage.Personnage;
 
 public class BattleBehavior {
-    public static String combat(MainCharacter player1, MainCharacter player2) {
+    public static String combat(Personnage player1, Personnage player2) {
         int pv1 = player1.getPv();
         int pv2 = player2.getPv();
         int magie1 = player1.getMagie();
@@ -73,7 +73,7 @@ public class BattleBehavior {
         return "Fin du combat";
     }
 
-    private static void getEndOfTurn(MainCharacter player1, MainCharacter player2, int pv1, int pv2, String stuff1, String stuff2) {
+    private static void getEndOfTurn(Personnage player1, Personnage player2, int pv1, int pv2, String stuff1, String stuff2) {
         if (pv1 <= 0 && pv2 <= 0) {
             System.out.println("Les deux joueurs sont morts");
         } else if (pv1 <= 0) {
